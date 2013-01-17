@@ -1,6 +1,8 @@
-#!/bin/sh
+#! /bin/sh
 
 set -e
+
+CONFIG_PATH="${HOME}/config"
 
 clean() {
   rm -f "${HOME}/.vimrc"
@@ -10,10 +12,11 @@ clean() {
 }
 
 install() {
-  ln -s "vimrc" "${HOME}/.vimrc"
-  ln -s "tmux.conf" "${HOME}/.tmux.conf"
-  ln -s "bashrc" "${HOME}/.bashrc"
-  ln -s "gitconfig" "${HOME}/.gitconfig"
+  ln -s "${CONFIG_PATH}/vimrc" "${HOME}/.vimrc"
+  ln -s "${CONFIG_PATH}/tmux.conf" "${HOME}/.tmux.conf"
+  ln -s "${CONFIG_PATH}/bashrc" "${HOME}/.bashrc"
+  ln -s "${CONFIG_PATH}/gitconfig" "${HOME}/.gitconfig"
+  source "${HOME}/.bashrc"
 } 
 
 clean
