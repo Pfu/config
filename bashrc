@@ -18,4 +18,4 @@ PS1="\n$red[$cls$blue\H$cls$red]$cls$red[$cls$green\u$cls$red]$cls\d \t \n$blue\
 
 # User specific aliases and functions
 
-alias ll='ls -all'
+alias ll='ls -allh'
